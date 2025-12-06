@@ -7,12 +7,13 @@ The notebook contains four distinct architectures for spatiotemporal prediction:
 * **3D U-Net:** Processes spatial and temporal dimensions simultaneously using 3D convolutions.
 * **2D U-Net:** Adapts the standard U-Net by treating temporal frames as input channels.
 * **ConvLSTM U-Net:** Uses Convolutional LSTM cells within a U-Net encoder-decoder to model temporal evolution.
-* **CNN-Transformer:** Combines a CNN encoder for spatial features with a Transformer for temporal dependencies.
+
 
 ## Loss Function
 The training utilizes a `CombinedLoss` function consisting of:
 * L1 Loss (pixel-wise accuracy)
-* Perceptual Loss (VGG-based feature matching)
+* LPIPS Loss
+* Perceptual Loss
 * PSNR Loss
 * Background Regularization and Color Difference Loss.
 
